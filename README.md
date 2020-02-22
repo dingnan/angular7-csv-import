@@ -1,4 +1,4 @@
-# BackbaseProject
+# Angular7 project, import csv file, parse, display and filter the data.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
