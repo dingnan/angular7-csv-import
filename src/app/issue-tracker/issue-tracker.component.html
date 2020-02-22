@@ -1,0 +1,47 @@
+<h2>Issue Tracker</h2>
+<div class="csv-file-chooser-section">
+
+  <input type="file" #fileImportInput name="File Upload" id="txtFileUpload" (change)="fileChangeListener($event)"
+         accept=".csv"/>
+
+</div>
+
+<div class="csv-result-filter">
+  <h3>Minimal issue count:</h3> <input [(ngModel)]="minimalIssueCount" type="number" (keyup.enter)="applyFilter()"/>
+  <button class="filter-button" (click)="applyFilter()">Apply</button>
+</div>
+
+<div class="csv-result-table">
+
+  <table>
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>First name</th>
+      <th>Sur name</th>
+      <th>Issue count</th>
+      <th>Date of birth</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let csvData of filteredRecords;let i = index;">
+
+      <td>{{i+1}}</td>
+      <td>
+        <span>{{csvData.firstName}}</span>
+      </td>
+      <td>
+        <span>{{csvData.surName}}</span>
+      </td>
+      <td>
+        <span>{{csvData.issueCount}}</span>
+      </td>
+      <td>
+        <span>{{csvData.dob}}</span>
+      </td>
+
+    </tr>
+    </tbody>
+  </table>
+
+</div>

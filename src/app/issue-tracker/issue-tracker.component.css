@@ -1,0 +1,19 @@
+.csv-file-chooser-section {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    text-align: center;
+}
+
+.csv-result-table {
+    margin-top: 20px;
+    border: 1px solid #73AD21;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.filter-button {
+    margin-left: 10px;
+}
